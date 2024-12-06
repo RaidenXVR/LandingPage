@@ -7,7 +7,7 @@ const gambar = [
   './assets/images/about/toko1.jpg',
 ];
 
-function autogambar () {
+function autogambar() {
   const imageElement = document.getElementById('dynamicImage');
   const random = Math.floor(Math.random() * gambar.length);
   const randomgambar = gambar[random];
@@ -27,12 +27,12 @@ $(document).ready(function () {
     $('#product-flters li').removeClass('filter-active');
     $(this).addClass('filter-active');
     var filterValue = $(this).attr('data-filter');
-    
+
     $grid.isotope({ filter: filterValue });
-    
+
     setTimeout(function () {
       AOS.refresh();
-    }, 500); 
+    }, 500);
   });
 });
 
@@ -60,7 +60,7 @@ $(window).scroll(function () {
 // script text typing effect by saiful
 const typingText = document.getElementById("typing-text");
 const staticText = "Selamat Datang di ";
-const textArray = ["Toko Parfumku"];
+const textArray = ["Aleris"];
 let textIndex = 0;
 let charIndex = 0;
 
@@ -155,16 +155,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function sendWhatsAppMessage(event) {
     event.preventDefault();
-  
+
     const name = document.getElementById("g-name").value;
     const email = document.getElementById("g-email").value;
     const message = document.getElementById("g-msg").value;
-  
+
     const phoneNumber = "+628983756070"; // Ganti dengan nomor WhatsApp Anda
     const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-  
+
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
-  
+
     // Buka WhatsApp di tab baru
     window.open(whatsappURL, "_blank");
   }
